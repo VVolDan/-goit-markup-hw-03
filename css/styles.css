@@ -21,6 +21,17 @@ body {
 
 /* ----------------------General classes------------------------- */
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -31,8 +42,18 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .section {
   padding: 94px 0;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 .section-title {
@@ -46,36 +67,15 @@ a {
   text-align: center;
 }
 
-.pointer {
-  cursor: pointer;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-}
-
 .container {
   width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 /* --------------------------Header------------------------------- */
 
-header {
+.top {
   background-color: var(--white-color);
   border-bottom: 1px solid var(--border-color);
 }
@@ -94,10 +94,6 @@ header {
   letter-spacing: 0.03em;
 }
 
-.logo-header {
-  padding: 25px 0;
-}
-
 .blue-logo {
   color: var(--accent-color);
 }
@@ -110,9 +106,12 @@ header {
   color: var(--white-color);
 }
 
+.nav {
+  margin-left: 93px;
+}
+
 .nav-list {
   display: flex;
-  margin-left: 93px;
 }
 
 .nav-item {
@@ -124,6 +123,7 @@ header {
 }
 
 .nav-link {
+  display: block;
   padding: 32px 0;
   font-family: inherit;
   font-weight: 500;
@@ -286,11 +286,8 @@ header {
 
 .team-item {
   width: calc(100% / 4);
-  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0, 2);
-
-  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0, 14);
-
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0, 12);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .team-sign {
@@ -316,7 +313,7 @@ header {
 }
 
 /* ----------------------Footer------------------------- */
-footer {
+.bottom {
   background-color: var(--background-footer-color);
   padding: 60px 0;
 }
@@ -325,7 +322,7 @@ footer {
   color: var(--white-color);
 }
 
-address {
+.contact {
   margin-top: 20px;
 }
 
@@ -342,9 +339,12 @@ address {
   color: var(--accent-color);
 }
 
+.cont {
+  margin-top: 9px;
+}
+
 .footer-contact-link {
   display: inline-block;
-  margin-top: 9px;
 
   font-style: normal;
   font-size: 14px;
